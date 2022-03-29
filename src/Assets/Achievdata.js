@@ -1,0 +1,15 @@
+export const Achievdata =[
+    {id:0,year:'2021', dat:'Best personal trainer of crunch fitness Kitchener ,Canada'},
+    {id:1,year:'2020', dat:'Stood Top 20 in ALL INDIA NATIONAL LEVEL Best physique championship'},
+    {id:2,year:'2019', dat:'MR ANITS Power Lifting GOLD medal'},
+    {id:3,year:'2019', dat:'MR ANITS Bestphysiqe GOLD medal'},
+    {id:4,year:'2019', dat:'Inter-university Powerlifting SILVER medal'},
+    {id:5,year:'2019', dat:'Inter-university Bestphysiue GOLD medal'},
+    {id:6,year:'2018', dat:'Inter-university  Powerlifting SILVER medal'},
+    {id:7,year:'2018', dat:'MR ANITS Weightlifting GOLD medal'},
+    {id:8,year:'2018', dat:'Inter-university  Powerlifting SILVER medal '},
+    {id:9,year:'2018', dat:'Inter-university Bestphysiue SILVER   medaL'}, 
+    {id:10,year:'2017', dat:'MR ANITS  Bestphysiqe SILVER  medal'},
+    {id:11,year:'2017', dat:'Inter-university  Powerlifting BRONZE medal'},
+    {id:12,year:'2017', dat:'Inter-university Bestphysiue BRONZE medal'},   
+] 
