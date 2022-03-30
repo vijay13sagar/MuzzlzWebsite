@@ -22,7 +22,7 @@ const Contact = () => {
             <ContactImg src={plan}/>
                 <Hometext>Start a new case</Hometext>
                 <Contacttext>
-                Send us your details and goals to get a plan based on your body and food type.
+                Send us your details and goals to review your case study and get a unique plan based on your Body Mass Index (BMI).
                     <br/><br/>
                     Mail: fitnesskishore@gmail.com
                 </Contacttext>
