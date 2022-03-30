@@ -1,7 +1,7 @@
 import React from 'react';
 import { InfoCont, InfoImage, Infotext, AchieveTag,Achievedate, Sign } from '../Components/styles';
 import About_Kishore from '../Assets/About_Kishore.jpg';
-import { Achievdata } from '../Assets/Achievdata';
+import { Achievdata } from '../Data/Achievdata';
 
 
 const Info = () => {

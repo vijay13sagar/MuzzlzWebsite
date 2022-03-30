@@ -27,11 +27,12 @@ function App() {
   return (
     <div className="app">
       <NavBar>
-        <Link  to='info' smooth={true} duration={1000}><Logo src={finallogo2} /></Link>
+        <Logo src={finallogo2} />
         <NavIns>
           <Link  to='info' smooth={true} duration={1000}><NavItem>About</NavItem></Link>
           <Link  to='programs' smooth={true} duration={1000} ><NavItem>Programs</NavItem></Link>
           <Link  to='transform' smooth={true} duration={1000}><NavItem>Results</NavItem></Link>
+          <Link  to='contact' smooth={true} duration={1500}><NavItem>Contact</NavItem></Link>
         </NavIns>
         <MenuOpt>
         {isopen ? <Ico src={cross_icon} onClick={() => { setIsopen(!isopen) }} /> : <Ico src={menu_icon} onClick={() => { setIsopen(!isopen) }} />}
@@ -40,6 +41,7 @@ function App() {
           <Link  to='info' smooth={true} duration={1000}><NavItem onClick={() => { setIsopen(false) }}>About</NavItem></Link>
           <Link  to='programs' smooth={true} duration={1000} ><NavItem onClick={() => { setIsopen(false) }}>Programs</NavItem></Link>
           <Link  to='transform' smooth={true} duration={1000}><NavItem onClick={() => { setIsopen(false) }}>Results</NavItem></Link>
+          <Link  to='contact' smooth={true} duration={1500}><NavItem onClick={() => { setIsopen(false) }}>Contact</NavItem></Link>
         </div>
       </NavBar>
       {show && <StickyArr src={leftarr} onClick={scroll.scrollToTop} />}
@@ -47,7 +49,7 @@ function App() {
       <Info />
       <Programs />
       <Transform />
-      {/* <Contact/> */}
+      <Contact/>
     </div>
   );
 }

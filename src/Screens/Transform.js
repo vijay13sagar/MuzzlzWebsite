@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { imgdata } from '../Assets/imgdata';
-import { TransCont, TransformHead, TraImg, SliderCont, Hometext, TransImg, TransText, Arrow } from '../Components/styles';
+import { imgdata } from '../Data/imgdata';
+import { TransCont, TransformHead, TraImg, SliderCont, Hometext, TransImg, TransText, Arrow,Contacthead } from '../Components/styles';
 import leftarr from '../Assets/leftarr.svg';
 
 

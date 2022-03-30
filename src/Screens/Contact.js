@@ -1,21 +1,45 @@
 import React from 'react';
-import { ContactCont, InfoImage, Infotext } from '../Components/styles';
-import About_Kishore from '../Assets/About_Kishore.jpg';
-
+import { ContactCont, Contcard,SpaceFlex,ContactImg,Hometext,Contacttext,ContactBtn,TransformHead } from '../Components/styles';
+import call from '../Assets/call.png';
+import plan from '../Assets/plan.png';
+import instag from '../Assets/instag.png';
 
 const Contact = () => {
     return (
         <ContactCont id='contact'>
-            <Infotext>
-                Hey, I’m Lisa -<br /><br /> I'm 32 and reside in Dubai with my husband Romane and cat, Hendricks. I’ve been a personal trainer for 5 years and have been in fitness for 12 years.
-
-                <br /><br />I started my journey into exercise and fitness 12 years ago and one of the reasons I did this was to gain more confidence in myself.  It was tough at first but it did work. Through being consistent and dedicating my time to eating the correct nutrition and exercising for my future self, I started to see improvements both physically and mentally! Our bodies are incredible and most people don’t know how changing their lifestyle to a healthier and more active one can benefit them. I’m here to show you that you can improve your fitness at any age AND see results with me. I want to share my tips and knowledge and help you to see the best version of you, for you!
-
-                <br /><br />My fitness training and nutrition is for anyone, whichever level of fitness you are, the possibilities really are endless, come and join my great community.  Let’s motivate, encourage and lift each other to get the results you want!
-
-                <br /><br />Lisa Xx
-            </Infotext>
-            <InfoImage src={About_Kishore} />
+            <TransformHead>Contact Us</TransformHead>
+            <SpaceFlex>
+            <Contcard>
+                <ContactImg src={call}/>
+                <Hometext>By phone</Hometext>
+                <Contacttext>
+                    (Monday to Friday, 9 AM to 4 PM EST)
+                    <br/><br/>
+                    Call: 1-548-881-0508
+                </Contacttext>
+            </Contcard>
+            <Contcard>
+            <ContactImg src={plan}/>
+                <Hometext>Start a new case</Hometext>
+                <Contacttext>
+                Send us your details and goals to get a plan based on your body and food type.
+                    <br/><br/>
+                    Mail: fitnesskishore@gmail.com
+                </Contacttext>
+                <ContactBtn href="mailto:fitnesskishore@gmail.com">Email Us</ContactBtn>
+            </Contcard>
+            <Contcard>
+            <ContactImg src={instag}/>
+                <Hometext>Follow Us</Hometext>
+                <Contacttext>
+                    Get updated with my body transforming lessons on Instagram
+                    <br/><br/>
+                    @fitness_kishore
+                </Contacttext>
+                <ContactBtn href='https://instagram.com/fitness_kishore?utm_medium=copy_link' target="_blank">Follow Us</ContactBtn>
+                
+            </Contcard>
+            </SpaceFlex>
         </ContactCont>
     );
 }

@@ -106,6 +106,21 @@ const up = keyframes`
     transform: translateY(-10px) rotate(90deg);
   }
 `
+
+const logomove = keyframes`
+  0%{
+    transform: translateX(0vw);
+  }
+  50%{
+    transform: translateX(100vw);
+  }
+  51%{
+    transform: translateX(0vw);
+  }
+  100%{
+    transform: translateX(0vw);
+  }
+`
 export const Container = styled.div`
 width: 100%;
 height: 100%;
@@ -159,7 +174,8 @@ font-size: 1.6vw;
 font-weight: 400;
 width:80vw;
 text-align: center;
-font-family: 'Bree Serif', serif;
+font-family: 'Alegreya SC', serif;
+//font-family: 'Bree Serif', serif;
 color: ${palette.Honeydew};
 `;
 export const HomeFoot = styled.p`
@@ -200,8 +216,9 @@ export const Logo = styled.img`
  height: 15vh;
  width: auto;
  &:hover{
-   transform: rotate(20deg);
-   transition: 0.4s ease-in-out;
+   /* transform: rotate(20deg);
+   transition: 0.4s ease-in-out; */
+   animation: ${logomove} 1s linear 1;
  }
  @media (max-width: 720px) {
   height: 8vh;
@@ -272,15 +289,12 @@ export const InfoCont = styled.div`
 `
 export const ContactCont = styled.div`
   width: 100%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 5%;
+  padding-bottom: 0%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  background-image: linear-gradient(to top,black, #4E4E4E);
-  @media (max-width: 720px) {
-    flex-direction: column;
-  }
+  background-image: linear-gradient(to top,black, #393939);
 `
 export const Infotext = styled.p`
   width: 40%;
@@ -377,6 +391,10 @@ width: 100%;
 justify-content: space-around;
 align-items: center;
 flex-wrap: wrap;
+padding-top: 5vh;
+row-gap:7vh;
+column-gap: 5vh;
+font-size: 1vw;
 `
 export const ImgCard = styled.img`
 width: 20vw;
@@ -391,11 +409,16 @@ padding: 0;
 margin-bottom: -20%;
 box-shadow: 0 2px 2px grey;
 object-fit: cover;
+overflow: clip;
+@media (max-width: 800px) {
+    width: 36vw;
+    height: 36vw;
+  }
 `
 export const HideText = styled.div`
 position : relative;
 top : -60%;
-font-size: 0.8rem;
+font-size: 1em;//0.8rem
 font-weight: 400;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color : #111;
@@ -403,35 +426,33 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   visibility : hidden;
   opacity : 0;
   transition : 0.3s ease-in-out;
-  @media (max-width: 1080px) {
+  @media (max-width: 800px) {
+    font-size: 2em;
+  }
+  @media (max-width: 550px) {
+    font-size: 1.5em;
+  }
+  /* @media (max-width: 1080px) {
     font-size: 0.6rem;
   }
   @media (max-width: 820px) {
-    font-size: 8px;
-  }
-  @media (max-width: 720px) {
-    font-size: 6px;
-  }
-  @media (max-width: 500px) {
-    font-size: 4px;
-  }
-`
-export const CardHead = styled.p`
-font-size: 1rem;
-font-weight: 700;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-/* position : relative;
-top : -100%; */
-color : #111;
-text-align : center;
-@media (max-width: 1080px) {
     font-size: 0.8rem;
   }
-  @media (max-width: 720px) {
-    font-size: 8px;
+  @media (max-width: 580px) {
+    font-size: 0.6rem;
   }
-  @media (max-width: 500px) {
-    font-size: 5px;
+  @media (max-width: 470px) {
+    font-size: 0.5rem;
+  } */
+`
+export const CardHead = styled.p`
+font-size: 1.4em;
+font-weight: 700;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color : #111;
+text-align : center;
+@media (max-width: 800px) {
+  font-size  : 2em;
   }
 `
 export const ContentCard = styled.div`
@@ -441,7 +462,6 @@ background-color: white;
 border: 1px solid white;
 color: black;
 display: flex;
-/* align-items: center; */
 justify-content: center;
 word-wrap: break-word;
 box-shadow: 2px 8px 4px #2C2A2A;
@@ -449,8 +469,11 @@ padding: 2%;
 padding-bottom: 0%;
 flex-wrap: wrap;
 border-radius: 2%;
-margin: 2.5vh 2.5vw 5vh;
+//margin: 2.5vh 2.5vw 5vh;
 &:hover{
+  @media (max-width: 800px) {
+    height: 42vw;
+  }
   height: 25vw;
   transition : 0.4s linear;
   border: 1px solid #09F9F2;
@@ -470,10 +493,18 @@ margin: 2.5vh 2.5vw 5vh;
   }
 &:hover ${ImgCard} {
   /* visibility: hidden; */
+  padding: 0;
   top: -70%;
   transition : 0.4s linear;
   border: 3px solid lightcoral;
   box-shadow: 0px 8px 4px grey;
+  /* @media (max-width: 700px) {
+    top:-80%;
+  } */
+  }
+  @media (max-width: 800px) {
+    width: 40vw;
+    height: 40vw;
   }
 `
 
@@ -521,3 +552,61 @@ font-size: 1.2rem;
     font-size: 1rem;
   }
 `;
+export const BgImg= styled.div`
+width:100%;
+height: 100%;
+background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWkbVtYTxwScYfgCq-QUAc9uYLaUz4VQIvkfXgp7icBBeOTVWRE4V5d_wvgjI-a8AZlA7yTHLtdmbPWYVid7bT-9gsk2oj2xYiR7QHHdE5uYSV32zLtkUgXKgbYObnQ8XpN9-yzs7XU-V-Bc0PS4inc7Nga7O-E_Y2kxL_-K2YnofDSXDiSPBqgNjn/s3765/fbfdsbffb%20(1).jpg');
+background-size: cover;
+background-repeat: no-repeat;
+@media (min-width: 800px) {
+    display: none;
+  }
+`
+export const Contacthead= styled.h1`
+font-size: 2rem;
+color: white;
+font-family: 'Cantata One', serif;
+font-size: 600;
+padding-bottom: 2rem;
+`
+export const SpaceFlex= styled.div`
+padding:5% 0% ;
+display: flex;
+justify-items:center;
+gap:5vw;
+`
+
+export const Contcard= styled.div`
+display: flex;
+word-wrap: break-word;
+flex-direction: column;
+align-items: center;
+width: 25vw;
+height: auto;
+overflow: hidden;
+`
+export const ContactImg= styled.img`
+height: auto;
+width: 90%;
+`
+export const Contacttext = styled.p`
+  text-align: center;
+  flex-wrap: wrap;
+  font-size: 1.1vw;
+  font-weight: 100;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+`
+
+export const ContactBtn= styled.a`
+font-size: 1.2vw;
+font-weight: 400;
+background-color: lightcoral;
+border: 1px solid black;
+border-radius: 20%;
+text-decoration: none;
+text-align: center;
+padding: 0.5vw;
+font-family: 'Alegreya SC', serif;
+color: black;
+`

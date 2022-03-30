@@ -1,10 +1,11 @@
 import React from 'react';
-import { ProgCont, CardHead, Hometext, ContentCard, CardCont, ImgCard, HideText } from '../Components/styles';
-import { progdata } from '../Assets/progdata';
+import { ProgCont, CardHead, Hometext, ContentCard, CardCont, ImgCard, HideText,TransformHead } from '../Components/styles';
+import { progdata } from '../Data/progdata';
 
 const Programs = () => {
     return (
         <ProgCont id='programs'>
+            <TransformHead>Programs</TransformHead>
             <CardCont>
                 {progdata.map((item, id) => {
                     return (
