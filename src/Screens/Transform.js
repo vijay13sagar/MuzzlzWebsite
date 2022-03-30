@@ -41,7 +41,7 @@ const Transform = () => {
                 <TransImg>
                     <TransText del={0}>WEIGHT LOSS PROGRAM</TransText>
                     <TransText del={1}>POWERLIFTING TRAINING</TransText>
-                    <TransText del={2}>WEDDING TRANSFORMATIONS</TransText>
+                    <TransText del={2}>STRENGTH AND ENDURANCE TRAINING</TransText>
                     <TransText del={3}>LIFESTYLE FITNESS COACHING</TransText>
                 </TransImg>
 
